@@ -106,7 +106,7 @@ class S3Azure(S3Base):
         try:
             blob_client = cls.blob_service_client.get_container_client(container=bucket)
             blob_list = blob_client.list_blobs(name_starts_with=key_filter)
-            result = [blob for blob in blob_list]
+            result = [blob['name'] for blob in blob_list]
         except Exception as ex:
             line = f'list_objects {bucket} {key_filter} exception: {ex}'
             cls.logger.error(line)
