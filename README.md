@@ -1,2 +1,2 @@
 # S3CloudAbstraction
-S3 cloud abstraction for AWS and Azure
+Python S3 cloud abstraction for AWS and Azure
